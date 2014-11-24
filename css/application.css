@@ -1,0 +1,59 @@
+body, html, .container-fluid { 
+  height: 100%;
+}
+
+.map-area .col-sm-8 {
+	padding-left: 0px;
+	padding-top: 0px;
+	height: 100%;
+}
+
+.row.map-area {
+	height: 100%;
+}
+
+#map {
+	height: 100%;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;
+}
+
+body {
+	margin-top: 0px !important;
+	padding-top: 50px;
+}
+
+.controls {
+	margin-top: 10px;
+}
+
+.controls .btn-group {
+	margin-bottom: 10px;
+}
+
+#devices {
+	overflow-y: scroll;
+}
+.device {
+	margin-bottom: 10px;
+}
+
+.device-id {
+	font-size: 12px;
+}
+
+.details {
+	margin-top: 6px;
+	font-size: 12px;
+}
+
+.coordinates {
+	font-weight: bold;
+}
+
+#loader {
+	display: none;
+}
