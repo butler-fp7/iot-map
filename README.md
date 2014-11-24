@@ -7,6 +7,8 @@ It uses the [Localization Manager SmartServer](http://open-platforms.eu/library/
 
 See it in action: http://iotmap.iot-butler.eu/.
 
+The app can be started locally thanks to the `server.js` script ([nodejs](http://nodejs.org/) required). Start it with `./server.js` and access it on [http://localhost:8000](http://localhost:8000).
+
 Contact details:
 
 - [Francesco Sottile](http://www.ismb.it/francesco.sottile) and [Federico Rizzo](http://www.ismb.it/federico.rizzo) ([ISMB](http://www.ismb.it/))
