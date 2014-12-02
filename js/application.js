@@ -58,9 +58,9 @@ var iotMap = (function() {
             // create an icon feature per device and set the style with a numbered marker
             var iconFeature = new ol.Feature({
                         geometry: new ol.geom.Point(ol.proj.transform([device.geo.longitude, device.geo.latitude], 'EPSG:4326', 'EPSG:3857')),
-                        name: 'Device # ' + index,
+                        name: 'Device # ' + index+1,
                     });
-            iconFeature.setStyle(iotMap.iconStyles[index]);
+            iconFeature.setStyle(iotMap.iconStyles[index+1]);
             iotMap.vectorSource.addFeature(iconFeature);
         },
         removeFeatures: function() {
