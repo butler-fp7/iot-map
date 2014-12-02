@@ -56,4 +56,6 @@ body {
 
 #loader {
 	display: none;
+	margin-bottom: 9px;
+	margin-left: 20px;
 }

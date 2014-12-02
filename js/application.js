@@ -11,6 +11,8 @@ var iotMap = (function() {
         initialZoomLevel: 19,
         locations: [{"name": "ISMB", "lat": 7.65905604971683, "lng": 45.065617698525},
                     {"name": "Tecnalia", "lat": -2.860733239072649, "lng": 43.29266368398545}],
+        refreshInterval: 5, // in seconds
+        refreshTimer: null, // hold the setTimeout instance
         // load devices and store them in the devices array
         loadDevices: function(){
             $.getJSON(this.devicesURL, 
@@ -72,6 +74,14 @@ var iotMap = (function() {
             iotMap.devices = [];
             iotMap.loadDevices();
         },
+        startAutoRefresh: function() {
+            iotMap.refreshTimer = setInterval(function() {
+                iotMap.reloadDevices();
+            }, iotMap.refreshInterval*1000);
+        },
+        stopAutoRefresh: function() {
+            clearTimeout(iotMap.refreshTimer);
+        },
         setHandlers: function() {
             $(".center").on("click", function() {
                 // note: for that we could also hold coordinates in the devices array
@@ -81,6 +91,11 @@ var iotMap = (function() {
             });
             $(".refresh-devices").off().click(function() {
                 iotMap.reloadDevices();
+            });
+            $(".auto-refresh-devices").click(function() {
+                element = $(this);
+                element.toggleClass("btn-success");
+                element.hasClass("btn-success") ? iotMap.startAutoRefresh() : iotMap.stopAutoRefresh();
             });
             $(window).resize(function(){
                 iotMap.resizeDevivesArea();
