@@ -78,9 +78,31 @@ var iotMap = (function() {
             iotMap.refreshTimer = setInterval(function() {
                 iotMap.reloadDevices();
             }, iotMap.refreshInterval*1000);
+            iotMap.setRefreshCookie(true);
         },
         stopAutoRefresh: function() {
             clearTimeout(iotMap.refreshTimer);
+            iotMap.setRefreshCookie(false);
+        },
+        setRefreshCookie: function(status) {
+            // sets a cookie that will hold the auto-refresh mode
+            var date = new Date();
+            date.setTime(date.getTime()+(24*60*60*1000));
+            var expires = "expires="+date.toGMTString();
+            document.cookie = "auto-refresh=" + status + "; " + expires + "; path=/";
+        },
+        checkRefreshCookie: function() {
+            var cookies = document.cookie.split(';');
+            for(var i=0;i < cookies.length;i++) {
+                var c = cookies[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf("auto-refresh=true") == 0) {
+                    $(".auto-refresh-devices").addClass("btn-success");
+                    iotMap.startAutoRefresh();
+                    return true;
+                };
+            }
+            return false;
         },
         setHandlers: function() {
             $(".center").on("click", function() {
@@ -168,7 +190,7 @@ $(document).ready(function() {
     iotMap.showLoader();
     iotMap.buildMap();
     iotMap.loadDevices();
-
+    iotMap.checkRefreshCookie();
     // resize the devices box to same the same height that the map
     iotMap.resizeDevivesArea();
 });
