@@ -2,7 +2,7 @@ body, html, .container-fluid {
   height: 100%;
 }
 
-.map-area .col-sm-8 {
+.map-area .col-sm-8, .map-area .col-xs-7 {
 	padding-left: 0px;
 	padding-top: 0px;
 	height: 100%;
@@ -33,6 +33,7 @@ body {
 .controls .btn-group {
 	margin-bottom: 10px;
 }
+
 
 #devices {
 	overflow-y: scroll;

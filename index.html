@@ -33,14 +33,14 @@
 
 		<div class="container-fluid">
 		    <div class="row map-area">
-		        <div class="col-sm-8">
+		        <div class="col-sm-8 col-xs-7">
 		  			<div id="map"></div>
 		        </div>
-		        <div class="col-sm-4 controls">
+		        <div class="col-sm-4 col-xs-5 controls">
 
-					<div class="btn-group">
+					<div class="btn-group"> <!--hidden-sm hidden-xs">-->
 					  <a class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
-					    <span class="glyphicon glyphicon-pushpin"></span>&nbsp;Center to <span class="caret"></span>
+					    <span class="glyphicon glyphicon-pushpin"></span>&nbsp;Center<span class="caret"></span>
 					  </a>
 					  
 					  <a class="btn btn-default refresh-devices">
@@ -72,7 +72,11 @@
 							  <div class="details">
 								  <div class="location">
 								  	<ul class="list-unstyled">
-								  		<li class="coordinates">Coordinates: <span class="lat"></span>, <span class="lng"></span></li>
+								  		<li class="coordinates hidden-sm hidden-md">Coordinates: <span class="lat"></span>, <span class="lng"></span></li>
+								  		<li class="coordinates visible-sm visible-md">Coordinates:<br/>
+								  			lat: <span class="lat"></span><br/>
+								  			lng: <span class="lng"></span>
+								  		</li>
 								  		<li>Height: <span class="height"></span></li>
 								  		<li>TimePosEst: <span class="time-pos-est"></span></li>
 								  	</ul>
