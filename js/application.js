@@ -161,8 +161,7 @@ var iotMap = (function() {
                     new ol.layer.Image({                    
                         source: new ol.source.ImageWMS({
                                 url: this.geoServerURL,
-                                // params:{'LAYERS':'butler:georef_perlabs_def'},
-                                params:{'LAYERS':'planos:planos'},
+                                params:{'LAYERS':'butler:georef_perlabs_def,planos:planos'},
                                 serverType: 'geoserver'
                         })
                     }),
