@@ -3,7 +3,7 @@ iot-map
 
 The **iotMap app** has been developed in the context of the [BUTLER project](http://www.iot-butler.eu). It shows on a map  positions of devices that are connected to a specific BUTLER gateway.
 
-It uses the [Localization Manager SmartServer](http://open-platforms.eu/library/butler-localization-manager-smartserver/) and the [SmartMobile framework (BUTLERjs)](http://open-platforms.eu/library/butler-js/) from BUTLER, along with [jQuery](http://jquery.com/), [OpenLayers](http://openlayers.org/) and [GeoServer](http://geoserver.org/). 
+It uses the [Localization Manager SmartServer](http://open-platforms.eu/library/butler-localization-manager-smartserver/) and the [SmartMobile framework (BUTLERjs)](http://open-platforms.eu/library/butler-js/) from BUTLER, along with [jQuery](http://jquery.com/), [OpenLayers](http://openlayers.org/), [GeoServer](http://geoserver.org/) and [Map Icons Collection](http://mapicons.nicolasmollet.com/). 
 
 See it in action: http://iotmap.iot-butler.eu/.
 
