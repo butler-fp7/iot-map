@@ -12,7 +12,7 @@ var iotMap = (function() {
         locations: [{"name": "Palacio de la Magdalena", "lat": -3.766161111111111, "lng": 43.469063888888890},
                     {"name": "Tecnalia", "lat": -2.860733239072649, "lng": 43.29266368398545},
                     {"name": "ISMB", "lat": 7.65905604971683, "lng": 45.065617698525}],
-        refreshInterval: 5, // in seconds
+        refreshInterval: 1, // in seconds
         refreshTimer: null, // hold the setTimeout instance
         // load devices and store them in the devices array
         loadDevices: function(){
