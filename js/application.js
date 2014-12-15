@@ -7,9 +7,10 @@ var iotMap = (function() {
         vectorLayer: null,
         geoServerURL: 'http://localizationmanager.ismb.iot-butler.eu:8081/geoserver/wms?',
         devicesURL: "http://localizationmanager.ismb.iot-butler.eu/api/v1/associations",
-        initialCenter: [-3.766161111111111, 43.469063888888890],
+        initialCenter: [7.662725, 45.0630861111111],
         initialZoomLevel: 18,
-        locations: [{"name": "Palacio de la Magdalena", "lat": -3.766161111111111, "lng": 43.469063888888890},
+        locations: [{"name": "Politecnico di Torino", "lat": 7.662725, "lng": 45.0630861111111},
+                    {"name": "Palacio de la Magdalena", "lat": -3.766161111111111, "lng": 43.469063888888890},
                     {"name": "Tecnalia", "lat": -2.860733239072649, "lng": 43.29266368398545},
                     {"name": "ISMB", "lat": 7.65905604971683, "lng": 45.065617698525}],
         refreshInterval: 1, // in seconds
